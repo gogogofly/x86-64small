@@ -60,6 +60,7 @@ jobs:
         df -hT $PWD
         git clone $REPO_URL -b $REPO_BRANCH openwrt
         ln -sf /workdir/openwrt $GITHUB_WORKSPACE/openwrt
+        sudo mkdir -p /workdir/openwrt/staging_dir/host/bin/
         sudo cp /usr/bin/upx /workdir/openwrt/staging_dir/host/bin/
 
     - name: Load custom feeds
